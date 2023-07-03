@@ -9,12 +9,12 @@ import { faker } from "@faker-js/faker";;
 export class AppComponent {
   randomText = faker.hacker.phrase();
   userInput = '';
-  solved = false;
+  solved = true;
 
   onInput(value: string) {
     this.userInput = value;
     if (value === this.randomText) {
-      this.solved = true;
+      this.solved = false;
     }
 
   }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoremModule, faker } from "@faker-js/faker";
+import { faker } from "@faker-js/faker";;
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,5 @@ import { LoremModule, faker } from "@faker-js/faker";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-typing';
+  randomText = faker.hacker.phrase();
 }

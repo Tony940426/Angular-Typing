@@ -5,9 +5,12 @@
 
       <p class="has-text-centered">{{randomText}}</p>
 
-      <input class="input"/>
+      <div class="field">
+        <input class="input" (input)="onInput($any($event).target.value)"/>
+      </div>
+
       <div class="box has-text-centered">
-        <h2 class="title">Success</h2>
+        <h2 class="title" display="displayOff()">Success</h2>
       </div>
     </div>
   </div>

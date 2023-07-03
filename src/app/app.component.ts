@@ -8,4 +8,14 @@ import { faker } from "@faker-js/faker";;
 })
 export class AppComponent {
   randomText = faker.hacker.phrase();
+  userInput = '';
+
+  onInput(value: string) {
+    this.userInput = value
+    this.displayOff()
+  }
+
+  displayOff(){
+    this.userInput === this.randomText ? true : false;
+  }
 }

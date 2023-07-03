@@ -9,13 +9,13 @@ import { faker } from "@faker-js/faker";;
 export class AppComponent {
   randomText = faker.hacker.phrase();
   userInput = '';
+  solved = false;
 
   onInput(value: string) {
-    this.userInput = value
-    this.displayOff()
-  }
+    this.userInput = value;
+    if (value === this.randomText) {
+      this.solved = true;
+    }
 
-  displayOff(){
-    this.userInput === this.randomText ? true : false;
   }
 }
